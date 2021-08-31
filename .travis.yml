@@ -22,3 +22,22 @@ notifications:
   email:
     recipients:
       - "jylim@bsks.ac.kr"
+
+before_deploy:
+#  - 현재 모든 파일을 압축
+  - zip -r spring-boot-project *
+  - mkdir -p deploy
+  - mv spring-boot-project.zip deploy/spring-boot-project.zip
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # travis에서 설정된 변수
+    secret_access_key: $AWS_SECRET_KEY # travis에서 설정된 변수
+
+    bucket: spring-boot-project-build # s3 버킷 명
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip 접근 private
+
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    wait-until-deployed: true

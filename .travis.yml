@@ -41,3 +41,18 @@ deploy:
 
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
+
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # travis에서 설정된 변수
+    secret_access_key: $AWS_SECRET_KEY # travis에서 설정된 변수
+
+    bucket: spring-boot-project-build # s3 버킷 명
+    key: spring-boot-project.zip # 빌드파일 압축해서 전달
+
+    bundle_type: zip # 압축 확장자
+    application: spring-boot-project #웹 콘솔에서 등록한 codeDeploy 앱 이름
+
+    deployment_group: spring-boot-project # 웹 콘솔에서 등록한 codeDeploy 배포 그룹 이름
+
+    region: ap-northeast-2
+    wait-until-deployed: true

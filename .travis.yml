@@ -37,7 +37,7 @@ deploy:
     bucket: spring-boot-project-build # s3 버킷 명
     region: ap-northeast-2
     skip_cleanup: true
-    acl: private # zip 접근 private
+    acl: private # zip 접근 private ㅇ
 
     local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true

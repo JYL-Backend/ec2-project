@@ -14,6 +14,8 @@ public class MemberEntityTests {
         //when
 
         Assertions.assertThat(1).isEqualTo(1);
+        Assertions.assertThat(1).isEqualTo(1);
+        Assertions.assertThat(1).isEqualTo(1);
         //then
     }
 }

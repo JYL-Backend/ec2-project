@@ -47,7 +47,7 @@ deploy:
     secret_access_key: $AWS_SECRET_KEY # travis에서 설정된 변수
 
     bucket: spring-boot-project-build # s3 버킷 명
-    key: spring-boot-project.zip # 빌드파일 압축해서 전달
+    key: spring-boot-project-build.zip # 빌드파일 압축해서 전달
 
     bundle_type: zip # 압축 확장자
     application: spring-boot-project #웹 콘솔에서 등록한 codeDeploy 앱 이름

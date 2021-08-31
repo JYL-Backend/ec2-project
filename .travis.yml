@@ -52,7 +52,7 @@ deploy:
     bundle_type: zip # 압축 확장자
     application: spring-boot-project #웹 콘솔에서 등록한 codeDeploy 앱 이름
 
-    deployment_group: spring-boot-project # 웹 콘솔에서 등록한 codeDeploy 배포 그룹 이름
+    deployment_group: spring-boot-project-group # 웹 콘솔에서 등록한 codeDeploy 배포 그룹 이름
 
     region: ap-northeast-2
     wait-until-deployed: true

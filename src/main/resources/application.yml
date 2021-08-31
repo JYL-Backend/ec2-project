@@ -10,4 +10,4 @@ spring:
     username: sa
 server:
   address: localhost
-  port: 7946
+  port: 8080

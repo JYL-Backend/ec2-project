@@ -8,10 +8,6 @@ public class MemberEntityTests {
     @Test
     public void create(){
         //given
-        MemberEntity.builder()
-                .name("test")
-                .build();
-
         //when
 
         //then

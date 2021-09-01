@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/test")
 public class TestController {
-    @GetMapping("/verison")
+    @GetMapping("/version")
     public String version(){
-        return "1.0";
+        return "1.1";
     }
 }

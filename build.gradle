@@ -31,3 +31,7 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+// 메인클래스 추가
+manifest {
+    attributes 'Main-Class': 'com.example.ec2project.Ec2ProjectApplication'
+}
